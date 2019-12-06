@@ -52,5 +52,11 @@ determined definitively by the ZIP code, it may still be possible to determine
 the rate area for that ZIP code. A ZIP code can also be in more than one rate area. In that case, the answer is ambiguous
 and should be left blank.
 
-To compile and run tests please use
-mvn clean compile test
+To compile and tests you can:
+- run maven clean compile test from your IDE
+- run `mvnw clean compile test` from command line in the project directory
+
+To run application you can:
+- run com.mocto.interview.Application class from your IDE
+- run `java -classpath target/classes:$HOME/.m2/repository/org/projectlombok/lombok/1.18.10/lombok-1.18.10.jar:$HOME/.m2/repository/com/opencsv/opencsv/4.5/opencsv-4.5.jar:$HOME/.m2/repository/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar:$HOME/.m2/repository/org/apache/commons/commons-text/1.3/commons-text-1.3.jar:$HOME/.m2/repository/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar:$HOME/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:$HOME/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:$HOME/.m2/repository/org/apache/commons/commons-collections4/4.2/commons-collections4-4.2.jar:$HOME/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar com.mocto.interview.Application` from command line in the project directory
+
