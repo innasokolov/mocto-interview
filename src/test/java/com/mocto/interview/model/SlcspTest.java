@@ -11,9 +11,4 @@ public class SlcspTest {
         Slcsp slcsp = new Slcsp(line.split(","));
         Assert.assertNull(slcsp.getRate());
     }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void testConstructor_LineIsEmpty() {
-        new Slcsp(new String[0]);
-    }
 }

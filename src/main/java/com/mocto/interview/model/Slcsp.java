@@ -2,8 +2,8 @@ package com.mocto.interview.model;
 
 
 import lombok.*;
+import org.apache.commons.lang3.StringUtils;
 
-@ToString
 @Getter
 @Setter
 @NoArgsConstructor
@@ -12,13 +12,14 @@ public class Slcsp {
     private String zipcode;
     private Double rate;
     public Slcsp(String [] fields) {
-        if (fields == null || fields.length == 0) {
-            throw new IllegalArgumentException("Slcsp fields are empty");
-        }
         zipcode = fields[0];
-        if (fields.length > 1) {
+        if (fields.length > 1 && StringUtils.isNotBlank(fields[1])) {
             rate = Double.valueOf(fields[1]);
         }
+    }
 
+    @Override
+    public String toString() {
+        return this.getZipcode() + "," + ((this.getRate() != null)?this.getRate():"");
     }
 }
